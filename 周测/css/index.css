@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+/* .container {
+    width: 1300px;
+    margin: 0 auto;
+} */
+
+html {
+    background-color: #060f36;
+}
+
+.lsf_box {
+    background-color: #060f36;
+}
+
+.lsf_box .navbar {
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    background-color: #060f36;
+}
+
+.lsf_box .navbar .nav-link {
+    color: #fff;
+    font-size: 16px;
+}
+
+.lsf_box .navbar .nav-link:hover {
+    color: #f7063e;
+}
+
+.lsf_box .navbar-toggler {
+    background-color: #ff0054;
+}
+
+#navbarNavDropdown {
+    justify-content: flex-end;
+}
+
+.lsf_box .navbar-nav .nav-item {
+    margin: 0 15px;
+}
+
+@media (max-width: 992px) {
+    .container {
+        /* width: 100%; */
+        margin: 0;
+        padding: 0;
+    }
+
+    .lsf_box .navbar {
+        width: 100%;
+        flex-direction: row-reverse;
+        padding: 10px 0;
+    }
+
+    .lsf_box .navbar-nav {
+        background-color: #f7063e;
+        width: 100%;
+    }
+
+    .lsf_box .navbar-nav .nav-item {
+        margin: 0;
+    }
+
+    .lsf_box .navbar .nav-link:hover {
+        background-color: #060f36;
+    }
+
+    .lsf_box .navbar .nav-link {
+        margin: 0;
+        padding: 10px 15px;
+    }
+    .lsf_box .navbar-collapse{
+        z-index: 1000;
+
+    }
+}
+
+
+.lsf_beijing {
+    width: 100%;
+    background-color: #060f36;
+}
+
+.lsf_beijing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/image/hero-stripe.svg);
+    background-size: cover;
+    background-position: center center;
+    z-index: 11;
+}
+
+.lsf_beijing .container {
+
+    position: relative;
+    z-index: 12;
+}
+
+.lsf_beijing .container .row {
+    margin: 100px 0;
+    position: absolute;
+    color: white;
+    flex-direction: row-reverse;
+}
+
+.lsf_beijing .row span {
+    margin-top: -120px;
+    font-size: 14px;
+    border: 1px solid #f7063e;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.lsf_beijing .container h1 {
+    font-size: 56px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.lsf_beijing .container p {
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+
+.lsf_beijing .container a {
+    text-decoration: none;
+}
+
+.lsf_beijing .container .btn_left {
+    margin-right: 20px;
+    background-color: #f7063e;
+    border-radius: 10px;
+    padding: 15px 30px;
+    color: aliceblue;
+}
+
+.lsf_beijing .container .btn_right {
+    border: 3px solid #f7063e;
+    border-radius: 10px;
+    padding: 15px 30px;
+    color: aliceblue;
+}
+
+.lsf_beijing .container .btn_right:hover {
+    background-color: #f7063e;
+}
+@media (max-width: 992px) {
+    .lsf_beijing .container {
+        width: 100% !important;
+    }
+
+    .lsf_beijing .row {
+        flex-wrap: wrap;
+    }
+
+    .lsf_beijing .row {
+        display: block;
+        /* display: flex; */
+        text-align: center;
+    }
+
+    .lsf_beijing .col .lsf_tu {
+        margin-top: -50px;
+    }
+
+    .lsf_beijing .container span {
+        font-size: 12px;
+    }
+
+    .lsf_beijing.container p {
+        font-size: 16px;
+    }
+
+    .lsf_beijing .container h1 {
+        font-size: 24px;
+    }
+    .lsf_beijing .lsf_list {
+        margin-top: 50px;
+    }
+}
+
+
+
+.lsf_number {
+    width: 100%;
+    position: relative;
+    background-color: #060f36;
+    margin-bottom: -500px
+}
+.lsf_number .container {
+    position: absolute;
+    margin-top: 750px;
+    margin-left: 300px;
+    height: 160px;
+    border: 4px solid #f7063e;
+    border-radius: 100px;
+    padding: 10px
+}
+.lsf_number .col-lg-2  {
+    position: absolute;
+    margin-top: -100px;
+}
+
+.lsf_number h2 {
+    margin-left: 230px;
+    margin-top: 10px;
+    font-size: 36px;
+    color: aliceblue;
+    text-align: center;
+}
+.lsf_number p {
+    margin-left: 260px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bolder;
+    color: #f7063e;
+}
+
+.lsf_number h1 {
+    margin-left: 200px;
+    font-size: 80px;
+    color: #fff;
+    font-weight: bolder;
+}
+@media (max-width: 992px) {
+    .lsf_number .container {
+        width: 100% !important;
+        margin-left: 0;
+        margin-top: 900px;
+    }
+    .lsf_number .imgas{
+        display: block;
+        margin: 0 auto;
+    }
+    .lsf_number h2 {
+        margin-left: 0;
+    }
+    .lsf_number p {
+        margin-left: 0;
+    }
+    .lsf_number h1 {
+        margin-left: 0;
+    }
+ }
+
+
+.lsf_wenzi {
+    margin-top: 100px;
+}
+.lsf_wenzi span{
+    border: 2px solid #f7063e;
+    border-radius: 50px;
+    font-size: 14px;
+    color: white;
+    padding: 10px 20px;
+    
+}
+
+
+
+
+
+
+
+

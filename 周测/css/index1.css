@@ -1,0 +1,801 @@
+/* 全局样式 */
+body,
+html {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow-x: hidden;
+    background-color: #060f36;
+}
+
+/* 导航栏样式 */
+.navbar {
+    padding: 30px 0;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+
+.lsf_box {
+    border-bottom: 2px solid #666;
+}
+.lsf_box .navbar.scrolled {
+    background-color: #050c30 !important;
+}
+@media (max-width: 992px) {
+    .navbar {
+        padding: 10px 0;
+        flex-direction: row-reverse;
+    }
+
+    .lsf_box .container {
+        padding: 0;
+        margin: 0;
+        margin: 0 auto;
+    }
+
+    .lsf_box .nav-item {
+        background-color: #f7063e;
+        color: black;
+    }
+}
+
+.navbar.scrolled {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-toggler {
+    background-color: #f7063e;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f7063e !important;
+}
+
+.nav-item:hover {
+    background-color: #060f36;
+}
+
+.nav-item .dropdown-menu {
+    padding: 0;
+}
+
+.nav-item .dropdown-item:hover {
+    background-color: #060f36;
+    color: #f7063e;
+}
+
+/* 主要内容区域样式 */
+.lsf_beijing {
+    padding-bottom: 100px;
+    /* padding: 100px 0; */
+    background-color: #060f36;
+}
+
+.lsf_beijing::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/image/hero-stripe.svg);
+    background-size: cover;
+    background-position: center center;
+    z-index: 10;
+}
+
+.lsf_list span {
+    display: inline-block !important;
+    border-radius: 20px;
+    border: 2px solid #f7063e;
+    padding: 10px 25px;
+    font-size: 18px;
+    color: #fff;
+
+}
+
+.lsf_beijing .lsf_text .row {
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+}
+
+.lsf_text {
+    padding: 50px 0;
+}
+
+.lsf_list {
+    padding: 30px 0;
+}
+
+.lsf_list span {
+    color: #f7063e;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.lsf_list h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.lsf_list p {
+    color: white;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* 按钮样式 */
+.btn_left,
+.btn_right {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn_left {
+    background: #f7063e;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn_right {
+    background: transparent;
+    color: #f7063e;
+    border: 2px solid #f7063e;
+}
+
+.btn_left:hover {
+    background: #f7063e;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn_right:hover {
+    background: #f7063e;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 992px) {
+    .lsf_beijing .row {
+        display: block;
+    }
+
+    .lsf_beijing .lsf_list {
+        text-align: center;
+    }
+
+    .lsf_beijing a {
+        display: inline-block;
+        border-radius: 10px;
+        margin-left: 10px;
+    }
+
+    .lsf_beijing .btn_right {
+        color: #fff;
+    }
+}
+
+/* 数字区域样式 */
+.lsf_number {
+    background-color: #060f36;
+
+}
+
+.lsf_number .imgas {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: -160px;
+}
+
+.lsf_number .container {
+    border: 4px solid #f7063e;
+    padding: 40px 50px;
+    border-radius: 100px;
+}
+
+.lsf_number h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #f7063e;
+    text-align: right;
+}
+
+.lsf_number h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.lsf_number p {
+    font-size: 18px;
+    color: #f7063e;
+    text-align: center;
+
+}
+
+@media (max-width: 992px) {
+    .lsf_number .container {
+        width: 90%;
+        height: 404px;
+    }
+
+    .lsf_number .imgas {
+        margin-top: 10px;
+        margin-left: 120px;
+    }
+
+    .lsf_number h2 {
+        display: inline-block;
+    }
+
+    .lsf_number p {
+        font-size: 24px;
+        display: inline-block;
+    }
+}
+
+/* 文字区域样式 */
+.lsf_wenzi {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.lsf_wenzi::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 150px;
+    height: 90px;
+    right: 8%;
+    background-image: url(../images/image/about-us-bg-img.png);
+    background-size: cover;
+    background-position: center center;
+    z-index: 10;
+}
+
+.lsf_wenzi span {
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border: 1px solid #f7063e;
+    border-radius: 30px;
+    padding: 8px 20px;
+}
+
+.lsf_wenzi h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.lsf_wenzi h3 {
+    font-size: 16px;
+    color: rgba(255, 255, 255, .5);
+    display: inline-block;
+    width: 550px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 响应式调整 */
+@media (max-width: 992px) {
+    .lsf_list h1 {
+        font-size: 36px;
+    }
+
+    .lsf_number h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .btn_left,
+    .btn_right {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .lsf_wenzi::before {
+        width: 80px;
+        height: 50px;
+    }
+}
+
+.lsf_Exclusive {
+    margin-top: 50px;
+}
+
+.lsf_Exclusive .card {
+    background-color: #00072b;
+    padding: 20px 30px;
+    border-radius: 20px;
+}
+
+.lsf_Exclusive .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(var(--box-bg-color), var(--box-bg-color)) padding-box, linear-gradient(to bottom, #FFFFFF0D, #FFFFFF36) border-box;
+    border: 2px solid transparent;
+}
+
+.lsf_Exclusive .row .imgas {
+    width: 560px;
+}
+
+.lsf_Exclusive .card-body {
+    padding: 0;
+}
+
+.lsf_Exclusive h5 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.lsf_Exclusive p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, .8);
+}
+
+@media (max-width: 992px) {
+    .lsf_Exclusive .row {
+        display: block;
+    }
+
+    .lsf_Exclusive .imgas {
+        width: 400px !important;
+    }
+
+    .lsf_Exclusive img {
+        margin-bottom: 10px;
+    }
+
+    .lsf_Exclusive .col-lg-6 {
+        text-align: center;
+    }
+}
+
+.lsf_Play_Game {
+    margin: 100px 0;
+    text-align: center;
+    background-color: #08123b;
+}
+
+.lsf_Play_Game span {
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border: 1px solid #f7063e;
+    border-radius: 30px;
+    padding: 8px 20px;
+}
+
+.lsf_Play_Game h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.lsf_Play_Game img {
+    width: 80px;
+    height: 80px;
+}
+
+.lsf_Play_Game .card {
+    width: 330px;
+    background-color: #00072b;
+    margin: 10px;
+    padding: 50px;
+}
+
+.lsf_Play_Game .card h5 {
+    margin-top: 20px;
+}
+
+.lsf_Play_Game .card p {
+    color: rgba(255, 255, 255, .5);
+    margin-top: 10px;
+}
+
+.lsf_Play_Game .lsf_span {
+    content: '';
+    position: absolute;
+    font-family: var(--secondary-font);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin-top: -8%;
+    margin-left: 62%;
+    color: #3C4061;
+    z-index: 100;
+}
+
+.lsf_Play_Game .card-body::after {
+    content: '';
+    position: absolute;
+    background: url(../images/image/icon-right-arrow.png) no-repeat center right;
+    background-size: cover;
+    top: 27%;
+    right: -16%;
+    width: 124px;
+    height: 28px;
+    z-index: 100;
+}
+
+.lsf_Play_Game .lsf_list {
+    padding: 0;
+}
+
+@media (max-width: 992px) {
+    .lsf_Play_Game .card {
+        margin-bottom: 30px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .lsf_Play_Game img {
+        width: 60px;
+        height: 60px;
+        margin-left: 230px;
+        margin-top: 30px;
+    }
+
+    .lsf_Play_Game .card-body::after {
+        display: none;
+    }
+
+    .lsf_Play_Game .lsf_span {
+        margin-top: 10px;
+        margin-left: 80%;
+    }
+
+    .lsf_Play_Game .lsf_list {
+        margin-bottom: 30px;
+    }
+}
+
+
+.lsf_Online {
+    margin-top: 50px;
+}
+
+.lsf_Online .lsf_text {
+    font-size: 18px;
+    text-align: center;
+    color: rgb(253, 250, 250, .8);
+}
+
+.lsf_Online .lsf_text span {
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 2px solid #f7063e;
+    padding: 8px 20px;
+    margin-bottom: 20px;
+}
+
+.lsf_Online .lsf_text h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.lsf_Online .card {
+    background-color: #00072b;
+    text-align: center;
+}
+
+.lsf_Online p {
+    color: rgba(255, 255, 255, .5);
+}
+
+.lsf_Online .row {
+    margin-bottom: 30px;
+}
+
+.lsf_Categories .lsf_text {
+    text-align: center;
+}
+
+.lsf_Categories .lsf_text span {
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 2px solid #f7063e;
+    padding: 8px 20px;
+    margin-bottom: 30px;
+}
+
+.lsf_Categories .lsf_text h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.lsf_Categories .lsf_da_tu {
+    position: relative;
+}
+
+.lsf_Categories .lsf_lianjie {
+    position: absolute;
+    display: block;
+    top: 90%;
+}
+
+.lsf_Categories span {
+    margin-left: 30px;
+    font-size: 22px;
+}
+
+.lsf_Categories i {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #f7063e;
+    border-radius: 10px;
+    margin-top: -10px;
+    margin-left: 230px;
+}
+
+.lsf_Categories i svg {
+    margin-left: 9px;
+    margin-top: 8px;
+}
+
+.lsf_Categories .col-md-7 span {
+    position: absolute;
+    margin-top: -46px;
+    margin-left: 30px;
+    font-size: 22px;
+}
+
+.lsf_Categories .col-md-7 i {
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 240px;
+}
+.lsf_Categories .swiper.mySwiper {
+    overflow: hidden;
+}
+@media (max-width: 992px) {
+    .lsf_Categories i {
+        margin-left: 300px;
+    }
+
+    .lsf_Categories .col-md-7 i {
+        margin-left: 450px;
+    }
+}
+
+
+
+.lsf_Testimonials .swiper {
+    padding: 0 20px;
+    width: 260px;
+    height: 460px;
+    background-color: #08123b;
+}
+.lsf_Testimonials .lsf_text {
+    font-size: 18px;
+    text-align: center;
+    color: rgb(253, 250, 250);
+}
+
+.lsf_Testimonials .lsf_text span {
+    display: inline-block;
+    border: 2px solid #f7063e;
+    padding: 8px 20px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+}
+
+.lsf_Testimonials .lsf_text h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.swiper {
+    width: 80%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 50%;
+  }
+.lsf_Testimonials .card {
+    width: 300px !important;
+    height: 460px;
+    background-color: #08123b;
+    /* background-color: red; */
+    padding: 20px;
+    margin: 0 15px;
+}
+.lsf_Testimonials .card-body {
+    padding: 0;
+}
+.lsf_Testimonials h2 {
+    font-size: 22px;
+}
+.lsf_Testimonials h3 {
+    font-size: 16px;
+    color: rgba(212, 208, 208,.5);
+}
+.lsf_Testimonials p {
+    font-size: 16px;
+}
+
+.lsf_Testimonials .container {
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+.lsf_Testimonials .swiper-slide {
+    width: 300px !important;
+    margin: 0 !important;
+}
+.lsf_Testimonials .lsf_lsit_xing {
+    display: flex
+}
+
+.lsf_Testimonials .lsf_lsit_xing i {
+    width: 22px;
+    height: 22px;
+    margin-right: 5px;
+    background-color: orangered;
+}
+.lsf_Testimonials .lsf_lsit_xing img {
+    margin-left: 3px;
+    margin-top: 3px;
+    width: 16px;
+    height: 16px;   
+}
+
+.lsf_NewsBlog .card {
+    background-color: #00072b;
+    margin: 0;
+    padding: 0 10px;
+    margin-bottom: 100px;
+}
+.lsf_NewsBlog h5 img {
+    margin-top: -6px;
+}
+.lsf_NewsBlog h5 {
+    font-size: 14px;
+    color: rgba(238, 232, 232,.6);
+}
+.lsf_NewsBlog p {
+    font-size: 22px;
+}
+.lsf_NewsBlog .lsf_text {
+    font-size: 18px;
+    text-align: center;
+    color: rgb(253, 250, 250);
+}
+
+.lsf_NewsBlog .lsf_text span {
+    display: inline-block;
+    border: 2px solid #f7063e;
+    padding: 8px 20px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+}
+
+.lsf_NewsBlog .lsf_text h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.lsf_faqs .lsf_text {
+    font-size: 18px;
+    text-align: center;
+    color: rgb(253, 250, 250);
+}
+
+.lsf_faqs .lsf_text span {
+    display: inline-block;
+    border: 2px solid #f7063e;
+    padding: 8px 20px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+}
+
+.lsf_faqs .lsf_text h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.lsf_faqs button {
+    display: flex;
+    color: white;
+    width: 100%;
+    padding: 20px 30px;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: #050c30 !important;
+}
+.lsf_faqs .card {
+    background-color: #061037;
+    margin: 0;
+    padding: 0 30px;
+    font-size: 18px;
+}
+.lsf_faqs .card-body {
+    padding: 10px 50px;
+}
+.lsf_faqs .card-header button {
+    color: white;
+    border: transparent;
+}
+.lsf_faqs .accordion {
+    margin-bottom: 100px;
+}
+
+.lsf_gundongtiao {
+    width: 100%;
+}
+.lsf_gundongtiao .lsf_ul{
+    display: flex;
+}
+.lsf_gundongtiao .lsf_list{ 
+    display: flex;
+}
+.lsf_gundongtiao span {
+    display: flex;
+    flex-wrap: nowrap;
+    border: 0;
+}
+.lsf_gundongtiao img{
+    width: 30px;
+    height: 30px;   
+}
+
+
+
+
+
