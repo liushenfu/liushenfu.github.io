@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基本模板</title>
+    <link rel="stylesheet" href="./libs/swiper/swiper.min.css">
+    <style>
+        *{
+            margin: 0;
+        }
+        .swiper {
+            width: 600px;
+            overflow: hidden;
+            position: relative;
+            margin: 100px auto;
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            bottom: 10%;
+        }
+
+        img {
+            width: 600px;
+        }
+        .swiper-pagination-bullet-active {
+            background: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./images/1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/4.jpg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div><!--分页器。如果放置在swiper外面，需要自定义样式。-->
+    </div>
+    <script src="./libs/swiper/swiper.min.js"></script>
+    <script language="javascript">
+        var mySwiper = new Swiper('.swiper', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            mousewheel: true,
+            loop: true, // 循环模式选项
+            autoplay: true,//等同于以下设置
+            autoplay: {
+                delay: 1000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+        })
+        mySwiper.el.onmouseover = function () {
+            mySwiper.autoplay.stop();
+        }
+        //鼠标离开开始自动切换
+        mySwiper.el.onmouseout = function () {
+            mySwiper.autoplay.start();
+        }
+
+        //鼠标滑过pagination控制swiper切换
+        for (i = 0; i < mySwiper.pagination.bullets.length; i++) {
+            mySwiper.pagination.bullets[i].onmouseover = function () {
+                this.click();
+            };
+        }
+
+        //如果你在swiper初始化后才决定使用clickable，可以这样设置
+        mySwiper.params.pagination.clickable = true;
+        //此外还需要重新初始化pagination  b4
+        mySwiper.pagination.destroy()
+        mySwiper.pagination.init()
+        mySwiper.pagination.bullets.eq(0).addClass('swiper-pagination-bullet-active');
+    </script>
+
+</body>
+
+</html>

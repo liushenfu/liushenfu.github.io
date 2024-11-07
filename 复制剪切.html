@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>炫酷剪切板读取器</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #1a1a1a, #4a4a4a);
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        #processClipboard {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            margin-bottom: 30px;
+        }
+
+        #processClipboard:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
+        }
+
+        #processClipboard:active {
+            transform: translateY(1px);
+        }
+
+        #result {
+            width: 80%;
+            max-width: 600px;
+            min-height: 100px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+
+        #result::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        #result.active::before {
+            left: 100%;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        h1 {
+            color: #ff6b6b;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>剪切板内容读取器</h1>
+        <button id="processClipboard">读取剪切板</button>
+        <div id="result"></div>
+        <!-- <input id="result" type="text"> -->
+    </div>
+
+    <script>
+        document.getElementById('processClipboard').addEventListener('click', async function () {
+            try {
+                // 读取剪切板内容
+                const clipboardText = await navigator.clipboard.readText();
+
+                // 获取结果容器
+                const resultElement = document.getElementById('result');
+                
+                // 添加动画效果
+                resultElement.classList.add('active');
+                
+                // 显示内容
+                resultElement.textContent = clipboardText;
+                
+                // 移除动画类
+                setTimeout(() => {
+                    resultElement.classList.remove('active');
+                }, 1000);
+
+            } catch (error) {
+                console.error('发生错误:', error);
+                // 显示错误信息
+                document.getElementById('result').innerHTML = `
+                    <span style="color: #ff6b6b">错误: ${error.message}</span>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

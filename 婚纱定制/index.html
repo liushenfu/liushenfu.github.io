@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>基本模板</title>
+  <link rel="stylesheet" href="./libs/bootcss/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+
+  <link rel="stylesheet" href="./libs/fontIcon/font/bootstrap-icons.css1">
+  <link rel="stylesheet" href="./libs/swiper/css/swiper.css">
+  <style>
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 导航条 -->
+  <div class="box">
+    <div class="lsf_index_caption">
+      <div class="container">
+        <div class="lsf_consult ">
+          <span>欢迎来到纽约婚纱定制批发有限公司!</span>
+          <span class="float-right"><a href="./网页/源代码/index.html"><img src="./images/dian.png"
+                alt=""></a>咨询热线:4001-000-000</span>
+        </div>
+      </div>
+    </div>
+    <div class="lsf-title">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light wedding majda">
+          <h1>纽约婚纱</h1>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item ">
+                <a class="nav-link" href="#">
+                  网站首页
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  关于我们
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">公司简介</a>
+                  <a class="dropdown-item" href="#">企业文化</a>
+                  <a class="dropdown-item" href="#">荣誉资质</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  产品鉴赏
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">婚纱展示</a>
+                  <a class="dropdown-item" href="#">西装展示</a>
+                  <a class="dropdown-item" href="#">礼服展示</a>
+                  <a class="dropdown-item" href="#">配件展示</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  企业服务
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">批发销售</a>
+                  <a class="dropdown-item" href="#">团队风采</a>
+                  <a class="dropdown-item" href="#">服务报价</a>
+                  <a class="dropdown-item" href="#">专业定制</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  新闻资讯
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">公司新闻</a>
+                  <a class="dropdown-item" href="#">行业动态</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="#" role="button" data-toggle="dropdown">
+                  练习我们
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">练习方式</a>
+                  <a class="dropdown-item" href="#">在线留言</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="map dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              <img src="./images/yu.jpg" alt="">语言
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">中文</a>
+              <a class="dropdown-item" href="#">English</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- 轮播图 -->
+    <div class="lsf-slideshow">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="./网页/源代码/index.html"><img src="./images/banner1.jpg" class="d-block w-100" alt="..."></a>
+          </div>
+          <div class="carousel-item">
+            <a href="./网页/源代码/index.html"><img src="./images/banner2.jpg" class="d-block w-100" alt="..."></a>
+          </div>
+          <div class="carousel-item">
+            <a href="./网页/源代码/index.html"><img src="./images/banner3.jpg" class="d-block w-100" alt="..."></a>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="chanpin">
+    <span>产品展示</span>
+    <div class="huixian">
+      <div class="fist"></div>
+    </div>
+  </div>
+  <!-- 产品展示 -->
+  <div class="lsf-product-display">
+    <div class="container">
+      <div class="qiantaohezi">
+        <div class="drop-down-list">
+          <div class="lsf-top">
+            <span class="lsf-product">产品展示</span>
+            <span class="yingwen">PRODUCTS</span>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary" type="button" data-toggle="dropdown" aria-expanded="false">
+              婚纱展示
+            </button>
+            <div class="dropdown-down">
+              <button class="dropdown-item" type="button">>简约婚纱</button>
+              <button class="dropdown-item" type="button">>典雅婚纱</button>
+              <button class="dropdown-item" type="button">>美式婚纱</button>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary" type="button" data-toggle="dropright" aria-expanded="false">
+              礼服展示
+            </button>
+            <div class="dropdown-down">
+              <button class="dropdown-item" type="button"> >伴娘礼服</button>
+              <button class="dropdown-item" type="button"> >彩色礼服</button>
+              <button class="dropdown-item" type="button"> >短款礼服</button>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary" type="button" data-toggle="dropdown" aria-expanded="false">
+              西装展示
+            </button>
+            <div class="dropdown-down">
+              <button class="dropdown-item" type="button">>燕尾西装</button>
+              <button class="dropdown-item" type="button">>欧式西装</button>
+              <button class="dropdown-item" type="button">>典雅西装</button>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary" type="button" data-toggle="dropdown" aria-expanded="false">
+              配件展示
+            </button>
+            <div class="dropdown-down">
+              <button class="dropdown-item" type="button">>披肩</button>
+              <button class="dropdown-item" type="button">>头纱</button>
+              <button class="dropdown-item" type="button">>手套</button>
+              <button class="dropdown-item" type="button">>自冠</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="lsf-list-box">
+          <div class="card">
+            <img src="./images/pro2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">美式婚纱</h5>
+              <a href="#" class="btn btn-primary">MORE ></a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./images/pro3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">燕尾礼服</h5>
+              <a href="#" class="btn btn-primary">MORE ></a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./images/pro4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">简约婚纱</h5>
+              <a href="#" class="btn btn-primary">MORE ></a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./images/pro5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">头纱</h5>
+              <a href="#" class="btn btn-primary">MORE ></a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./images/pro6.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">典雅礼服</h5>
+              <a href="#" class="btn btn-primary">MORE ></a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./images/pro7.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">美式婚纱</h5>
+              <a href="#" class="btn btn-primary">MORE ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chanpin">
+    <span>公司简介</span>
+    <div class="huixian">
+      <div class="fist"></div>
+    </div>
+  </div>
+  <div class="lsf-company-profile">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="lsf-left">
+            <img src="./images/about.png" class="card-img-top" alt="...">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="lsf-right">
+            <h2 class="display-4">COMPANY PROFILE</h2>
+            <h3 class="display-4">公司简介</h3>
+            <p>苏州虎丘都市恋人婚纱礼服位于苏州婚纱一条街婚纱批发市场内,找苏州婚纱一条街,苏州婚</p>
+            <p>纱礼服一条街、 苏州婚纱礼服,苏州虎丘婚纱一条街,苏州婚纱礼服一条街,都市恋人苏州婚纱</p>
+            <p>礼服提供个人定制,外贸出口.。完美打造女性的婚纱礼服，做工精细，在立体剪裁技术上着</p>
+            <p>重面料的选用，从珠绣色彩 搭配到细节局部色调的强化，都凸现出优雅的个性。同时，公司</p>
+            <p>也吸收了很多欧美的元素，把更简洁细致的特征融入到设计中，让 新娘穿着舒适得体，又不</p>
+            <p>失高雅气质。本公司宗旨是随时代的步伐，不断更新提高婚纱的品味，将这份永恒留给每一</p>
+            <p>位新人。</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">查看更多 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chanpin">
+    <span>新品展示</span>
+    <div class="huixian">
+      <div class="fist"></div>
+    </div>
+  </div>
+
+  <!-- 新品展示 -->
+  <div class="lsf-picture-list">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="lsf-left">
+            <a href="#"><img src="./images/pro1.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="lsf-right">
+            <a href="#"><img src="./images/pro2.jpg" alt=""></a>
+            <a href="#"><img src="./images/pro3.jpg" alt=""></a>
+            <a href="#"><img src="./images/pro4.jpg" alt=""></a>
+            <a href="#"><img src="./images/pro5.jpg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chanpin">
+    <span>设计团队</span>
+    <div class="huixian">
+      <div class="fist"></div>
+    </div>
+  </div>
+
+  <!-- swiper轮播图 -->
+  <div class="swiper">
+    <div class="container">
+      <div class="mid">
+        <div class="photo">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./images/owl1.jpg" alt="1">
+                  <p>专业设计师</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./images/owl2.jpg" alt="2">
+                  <p>资深设计师</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./images/owl3.jpg" alt="3">
+                  <p>金牌设计师</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./images/owl4.jpg" alt="4">
+                  <p>高级设计师</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="chanpin">
+    <span>新闻资讯</span>
+    <div class="huixian">
+      <div class="fist"></div>
+    </div>
+  </div>
+
+  <!-- 新闻展示 -->
+  <div class="lsf-News-consultation">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="lsf-left mr-3">
+            <img src="./images/news1.jpg" alt="...">
+            <h3 class="mr-3">教大家来了解婚礼头纱</h3>
+            <p>古时候婚礼时，新娘头上都会蒙着一块别致的大红绸缎，被称为红盖头，这块盖头要入</p>
+            <p>洞房时由新郎揭开...</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">查看更多 >></a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="media-body">
+            <div class="lsf-calendar">
+              <div class="lsf-left">
+                <h1>07</h1>
+                <p>2017-06</p>
+              </div>
+              <div class="lsf-right">
+                <h2>重返“20岁”!青岛子女为父母补办海边集体婚礼</h2>
+                <p>5月20日,在青岛海岸青年广场上演了一场子女专门为父母补办的集体海边婚礼,忙碌半生的老人们身</p>
+                <p>着洁白的婚...</p>
+              </div>
+            </div>
+            <div class="xian"></div>
+            <div class="lsf-calendar">
+              <div class="lsf-left">
+                <h1>06</h1>
+                <p>2017-06</p>
+              </div>
+              <div class="lsf-right">
+                <h2>毕业季 这个班15对情侣举行集体婚礼</h2>
+                <p>毕业季 这个班15对情侣举行集体婚礼，大家伙凑在了一起一起举行了具有纪念意义的礼.….</p>
+              </div>
+            </div>
+            <div class="xian"></div>
+            <div class="lsf-calendar">
+              <div class="lsf-left">
+                <h1>05</h1>
+                <p>2017-06</p>
+              </div>
+              <div class="lsf-right">
+                <h2>重返“20岁”!青岛子女为父母补办海边集体婚礼</h2>
+                <p>5月20日,在青岛海岸青年广场上演了一场子女专门为父母补办的集体海边婚礼,忙碌半生的老人们身</p>
+                <p>着洁白的婚...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- 结尾 -->
+  <div class="lsf_ending_text">
+    <div class="container">
+      <div class="tanxinghezi">
+        <div class="lsf_set_box">
+          <ul>
+            <li class="active">关于我们</li>
+            <li>公司简介</li>
+            <li>企业文化</li>
+            <li>荣誉资质</li>
+          </ul>
+          <ul>
+            <li class="active">产品鉴赏</li>
+            <li>婚纱展示</li>
+            <li>西装展示</li>
+            <li>礼服展示</li>
+            <li>配件展示</li>
+          </ul>
+          <ul>
+            <li class="active">企业服务</li>
+            <li>批发销售</li>
+            <li>团队风采</li>
+            <li>服务报价</li>
+            <li>专业定制</li>
+          </ul>
+          <ul>
+            <li class="active">新闻资讯</li>
+            <li>公司新闻</li>
+            <li>行业动态</li>
+          </ul>
+          <ul>
+            <li class="active">联系我们</li>
+            <li>联系方式</li>
+            <li>在线留言</li>
+          </ul>
+        </div>
+        <div class="zhanqian">
+          <img src="./images/erwei.jpg" class="rounded mx-auto d-block" alt="...">
+        </div>
+        <div class="lsf_list">
+          <ul>
+            <li>
+              <div class="tu">
+                <ul>
+                  <li><img class="src" src="./images/name.png" alt=""></li>
+                  <li>联系人</li>
+                  <li>李女士</li>
+                </ul>
+                <ul>
+                  <li><img class="src" src="./images/dian.png" alt=""></li>
+                  <li>热线:</li>
+                  <li>4001-000-000</li>
+                </ul>
+                <ul>
+                  <li><img class="src" src="./images/email.png" alt=""></li>
+                  <li>邮箱:</li>
+                  <li>hunshadzhi@qq.com</li>
+                </ul>
+                <ul>
+                  <li><img class="src" src="./images/xing.png" alt=""></li>
+                  <li> 地址:</li>
+                  <li>苏州纽约婚纱定制批发</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./libs/jquery/jquery.slim.js"></script>
+  <script src="./libs/bootcss/js/bootstrap.bundle.js"></script>
+  <script src="./libs/swiper/js/swiper.js"></script>
+  <script src="./js/index.js"></script>
+
+  <script>
+    var mySwiper = new Swiper('.swiper', {
+      loop: true,
+      slidesPerView: 'auto',
+      loopedSlides: 5,
+    })
+  </script>
+  </script>
+</body>
+
+</html>
