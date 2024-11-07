@@ -9,7 +9,7 @@
     <style>
         body {
             width: 100%;
-            background: radial-gradient(circle, #4834d4, #686de0);
+            /* background: radial-gradient(circle, #4834d4, #686de0); */
                 }
 
         @keyframes gradient {
@@ -114,6 +114,7 @@
             var onten = Math.floor(Math.random() * 10)
             return `rgba(${one}, ${two}, ${three}, ${onten})`
         }
+        $("body").css("background-color", foo())
         $btnLeft.addEventListener('click', function () {
             $($lsfColorList).html('');
             var $ul = document.createElement('ul');
