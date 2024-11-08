@@ -1,42 +1,145 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>基本模板</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>项目导航</title>
     <style>
         body {
-            background-color: aqua;
+            margin: 0;
+            min-height: 100vh;
+            /* 更改为紫色系渐变背景，并添加动画 */
+            background: linear-gradient(-45deg, #23a6d5, #23d5ab);
             display: flex;
-            flex-wrap: wrap;
-            width: 600px;
-            height: 600px;
-            margin: 0 auto;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
         }
 
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            padding: 40px;
+            max-width: 1200px;
+            width: 100%;
+            perspective: 1000px;
+        }
+/* 
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+        } */
+
         a {
+            display: block;
+            padding: 25px;
+            text-align: center;
             text-decoration: none;
-            padding: 10px 20px;
-            border: 1px solid #000;
-            border-radius: 10px;
-            background-color: greenyellow;
+            color: #fff;
+            font-size: 1.1em;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.15);
+            /* backdrop-filter: blur(12px); */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        a:hover {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            letter-spacing: 2px;
+        }
+
+        /* 添加发光效果 */
+        a::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        a:hover::after {
+            opacity: 0.15;
+        }
+
+        /* 添加闪光效果 */
+        a::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.3),
+                    transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        a:hover::before {
+            animation: shine 1.5s;
+        }
+
+        @keyframes shine {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%) rotate(45deg);
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(100%) rotate(45deg);
+            }
         }
     </style>
 </head>
+
 <body>
-    
-    <a target="_blank" href=" ./周测/index.html">bootstrap</a>
-    <a target="_blank" href="./婚纱定制/index.html">婚纱定制</a>
-    <a target="_blank" href="./手风琴.html">手风琴</a>
-    <a target="_blank" href="./电梯1.html">电梯</a>
-    <a target="_blank" href="./复制剪切.html">复制剪切</a>
-    <a target="_blank" href="./轮播图.html">轮播图</a>
-    <a target="_blank" href="./色卡生成器.html">色卡生成器</a>
-    <script>
-    </script>
+    <div class="container">
+        
+        <div class="card">
+            <a target="_blank" href="./周测/index.html">Bootstrap</a>
+        </div>
+        <div class="card">
+            <a target="_blank" href="./婚纱定制/index.html">婚纱定制</a>
+        </div>
+        <div class="card">
+            <a target="_blank" href="./手风琴.html">手风琴</a>
+        </div>
+        <div class="card">
+            <a target="_blank" href="./电梯1.html">电梯</a>
+        </div>
+        <div class="card">
+            <a target="_blank" href="./复制剪切.html">复制剪切</a>
+        </div>
+        <div class="card">
+            <a target="_blank" href="./轮播图.html">轮播图</a>
+        </div>
+        <div class="card">
+            <a target="_blank" href="./色卡生成器.html">色卡生成器</a>
+        </div>
+        <!-- ... 其他卡片保持不变 ... -->
+    </div>
 </body>
+
 </html>

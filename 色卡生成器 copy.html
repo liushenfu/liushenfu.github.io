@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>鸣潮角色展示</title>
+    <style type="text/css">
+/* 只需要修改以下几个关键样式 */
+#main {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 40px;
+    min-height: 100vh; /* 确保最小高度占满屏幕 */
+}
+
+#main ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* 增加间距 */
+    height: 900px; /* 增加高度 */
+    margin: 50px 0; /* 增加上下边距 */
+}
+
+#main ul li {
+    list-style: none;
+    width: 180px; /* 增加初始宽度 */
+    height: 100%;
+    position: relative;
+    border-radius: 40px; /* 增加圆角 */
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+#main ul li:hover {
+    width: 600px; /* 增加展开宽度 */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+#main ul li .des {
+    padding: 60px; /* 增加内边距 */
+}
+
+#main ul li .des h4 {
+    font-size: 42px; /* 增加标题字体大小 */
+    margin-bottom: 20px;
+}
+
+#main ul li .des p {
+    font-size: 18px; /* 增加描述文字大小 */
+    line-height: 2;
+}
+
+/* 修改响应式布局的高度 */
+@media (max-width: 768px) {
+    #main ul li {
+        height: 400px; /* 增加移动端高度 */
+    }
+}
+
+/* 添加新的动画效果 */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#main ul li:hover .bg-img {
+    transform: scale(1.1) translateY(-5px);
+    animation: float 6s ease-in-out infinite;
+}
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="title">
+            <h2>鸣潮</h2>
+            <p>角色展示</p>
+        </div>
+        <ul>
+            <li>
+                <div class="bg-img" style="background-image: url('./images/changli-498d3608.png')"></div>
+                <div class="des">
+                    <h4>长离</h4>
+                    <p>「长离」，一个充满神秘色彩的角色，擅长使用独特的武器和技能。</p>
+                </div>
+            </li>
+            <li>
+                <div class="bg-img" style="background-image: url('./images/jinxi-1982d848.png')"></div>
+                <div class="des">
+                    <h4>今夕</h4>
+                    <p>「今夕」，优雅而神秘的角色，具有独特的战斗风格。</p>
+                </div>
+            </li>
+            <li>
+                <div class="bg-img" style="background-image: url('./images/sanhua-57e3ff0d.png')"></div>
+                <div class="des">
+                    <h4>散花</h4>
+                    <p>「散花」，灵动而优美的角色，战斗风格独树一帜。</p>
+                </div>
+            </li>
+            <li>
+                <div class="bg-img" style="background-image: url('./images/yinlin-61105ce2.png')"></div>
+                <div class="des">
+                    <h4>银鳞</h4>
+                    <p>「银鳞」，神秘而强大的角色，具有独特的能力。</p>
+                </div>
+            </li>
+            <li>
+                <div class="bg-img" style="background-image: url('./images/youhu-b7a845b2.png')"></div>
+                <div class="des">
+                    <h4>幽狐</h4>
+                    <p>「幽狐」，神秘莫测的角色，战斗风格独特。</p>
+                </div>
+            </li>
+            <li>
+                <div class="bg-img" style="background-image: url('./images/zhezhi-24e20d1e.png')"></div>
+                <div class="des">
+                    <h4>折纸</h4>
+                    <p>「折纸」，独特而神秘的角色，具有特殊的能力。</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+       $(document).ready(function() {
+    // 初始化时隐藏描述
+    $('.des').css('opacity', '0');
+
+    // 为每个卡片添加延迟出现动画
+    $('#main ul li').each(function(index) {
+        setTimeout(() => {
+            $(this).css({
+                'opacity': '1',
+                'transform': 'translateY(0)'
+            });
+        }, 200 + index * 150); // 增加延迟时间
+    });
+
+    // 鼠标移入效果
+    $('#main ul li').hover(
+        function() {
+            $(this).siblings().css({
+                'width': '180px', // 更新初始宽度
+                'filter': 'brightness(0.5)' // 增加暗度
+            });
+            $(this).css({
+                'width': '600px', // 更新展开宽度
+                'filter': 'brightness(1.1)' // 增加亮度
+            });
+            $(this).find('.des').css('opacity', '1');
+        },
+        function() {
+            $(this).siblings().css({
+                'width': '180px',
+                'filter': 'brightness(1)'
+            });
+            $(this).css({
+                'width': '180px',
+                'filter': 'brightness(1)'
+            });
+            $(this).find('.des').css('opacity', '0');
+        }
+    );
+
+    // 添加滚动动画
+    $(window).scroll(function() {
+        let scrollTop = $(window).scrollTop();
+        $('#main ul li').each(function() {
+            let offset = $(this).offset().top;
+            let height = $(window).height();
+            if (scrollTop + height > offset) {
+                $(this).addClass('visible');
+            }
+        });
+    });
+});
+    </script>
+</body>
+</html>
