@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基本模板</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #app {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .max_box {
+            width: 800px;
+            height: 500px;
+            position: relative;
+        }
+
+        .max_box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .min_box {
+            width: 800px;
+            height: 500px;
+            overflow: hidden;
+            margin-left: 10px;
+            position: relative;
+        }
+
+        .min_box img {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+        }
+
+        .mask {
+            position: absolute;
+            width: 200px;
+            height: 125px;
+            background-color: rgba(0, 255, 255, .5);
+            top: 0;
+            left: 0;
+        }
+
+        .list_img {
+            width: 800px;
+        }
+
+        .list_img ul {
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+        }
+
+        .list_img ul li {
+            width: 160px;
+            height: 120px;
+            cursor: pointer;
+        }
+
+        .list_img ul li img {
+            width: 160px;
+            height: 120px;
+            border-radius: 8px;
+        }
+
+        input {
+            margin-left: 20px;
+            height: 20px;
+            width: 600px;
+            background-color: #ccc;
+        }
+        .right {
+            position: relative;
+            width: 650px;
+            padding: 30px;
+            background-color: aqua;
+            border-radius: 10px;
+        }
+        span {
+            position: absolute;
+            margin-left: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: -5px;
+        }
+        .box {
+            margin-top: 20px;
+            width: 100%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="max_box">
+            <img src="./images/1.jpg" alt="">
+            <div class="mask"></div>
+        </div>
+        <div class="min_box">
+            <img src="./images/1.jpg" alt="">
+        </div>
+    </div>
+    <div class="box">
+        <!-- 点击修改图片路径 -->
+        <div class="list_img">
+            <ul>
+                <li><img src="./images/1.jpg" alt=""></li>
+                <li><img src="./images/2.jpg" alt=""></li>
+                <li><img src="./images/3.jpg" alt=""></li>
+                <li><img src="./images/4.jpg" alt=""></li>
+            </ul>
+        </div>
+        <!-- 选择多少倍的放大镜 -->
+        <div class="right">
+            <input type="range" min="2" max="10">
+            <span></span>
+        </div>
+    </div>
+    <script>
+        var element_mask = document.querySelector(".mask");
+        var element_max = document.querySelector(".max_box");
+        var element_min = document.querySelector(".min_box img");
+        var element_lis = document.querySelectorAll("ul li img");
+        var element_inp = document.querySelector("input")
+        var element_p = document.querySelector("span")
+
+        console.log(element_lis);
+        element_lis.forEach(function (item) {
+            console.log(item);
+            item.onclick = function () {
+                element_min.src = this.src;
+                element_max.querySelector('img').src = this.src;
+                console.log(element_max.src);
+                element_mask.style.display = "block";
+                element_min.style.display = "block";
+                element_max.style.display = "block";
+            }
+        })
+        element_inp.oninput = function () {
+            var inp = this.value
+            // console.log(inp);
+            foo(inp);
+            element_p.innerText = this.value;
+        }
+        var foo = function (inp) {
+            element_max.onmousemove = function (event) {
+                console.log(inp);
+                element_mask.style.width = element_max.offsetWidth / inp + "px";
+                element_mask.style.height = element_max.offsetHeight / inp + "px"
+
+                element_min.style.width = element_max.offsetWidth * inp + "px"
+                element_min.style.height = element_max.offsetHeight * inp + "px"
+                var x = event.clientX - element_max.offsetLeft;
+                var y = event.clientY - element_max.offsetTop;
+                console.log(x, y);
+
+                var x = x - element_mask.offsetWidth / 2;
+                var y = y - element_mask.offsetHeight / 2;
+                if (x < 0) {
+                    x = 0;
+                }
+                if (x > element_max.offsetWidth - element_mask.offsetWidth) {
+                    x = element_max.offsetWidth - element_mask.offsetWidth;
+                }
+                if (y < 0) {
+                    y = 0;
+                }
+                if (y > element_max.offsetHeight - element_mask.offsetHeight) {
+                    y = element_max.offsetHeight - element_mask.offsetHeight;
+                }
+                element_mask.style.left = x + "px";
+                element_mask.style.top = y + "px";
+
+                element_min.style.left = -x * inp + "px";
+                element_min.style.top = -y * inp + "px";
+            }
+        }
+    </script>
+</body>
+
+</html>
