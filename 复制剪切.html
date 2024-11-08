@@ -10,11 +10,13 @@
             margin: 0;
             min-height: 100vh;
             display: flex;
+            /* background: url(https://img0.baidu.com/it/u=2520962264,3545002727&fm=253&fmt=auto&app=120&f=JPEG?w=522&h=294); */
+            background: url(https://img2.baidu.com/it/u=3575689942,1225251601&fm=253&fmt=auto&app=138&f=JPEG?w=992&h=500);
+            /* background-repeat: no-repeat; */
+            background-size: cover;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(45deg, #1a1a1a, #4a4a4a);
-            font-family: 'Arial', sans-serif;
             color: white;
         }
 
@@ -101,6 +103,8 @@
     </div>
 
     <script>
+        console.log(window.innerWidth, window.innerHeight   );
+        
         document.getElementById('processClipboard').addEventListener('click', async function () {
             try {
                 // 读取剪切板内容

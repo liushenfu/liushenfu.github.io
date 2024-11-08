@@ -9,6 +9,8 @@
     <style>
         body {
             width: 100%;
+            background: url( https://img1.baidu.com/it/u=2224665956,2444421299&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500);
+            background-size: cover;
             /* background: radial-gradient(circle, #4834d4, #686de0); */
                 }
 
@@ -114,7 +116,7 @@
             var onten = Math.floor(Math.random() * 10)
             return `rgba(${one}, ${two}, ${three}, ${onten})`
         }
-        $("body").css("background-color", foo())
+        // $("body").css("background-color", foo())
         $btnLeft.addEventListener('click', function () {
             $($lsfColorList).html('');
             var $ul = document.createElement('ul');

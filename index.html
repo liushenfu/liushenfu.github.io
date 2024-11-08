@@ -1,149 +1,222 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>项目导航</title>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../libs/swiper/swiper.min.css">
+    <!-- <link rel="stylesheet" href="css/certify.css"> -->
+    <script src="../libs/swiper/swiper.min.js"></script>
     <style>
+    @charset "utf-8";
+
+    /* CSS Document */
         body {
-            margin: 0;
-            min-height: 100vh;
-            /* 更改为紫色系渐变背景，并添加动画 */
-            background: linear-gradient(-45deg, #23a6d5, #23d5ab);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        margin: 0
         }
 
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            padding: 40px;
-            max-width: 1200px;
-            width: 100%;
-            perspective: 1000px;
-        }
-
-        /* 
-        .card {
+    #certify {
             position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            transform-style: preserve-3d;
-        } */
+        width: 1200px;
+        margin: 0 auto
+    }
 
-        a {
-            display: block;
-            padding: 25px;
+    #certify .swiper-container {
+        padding-bottom: 60px;
+        }
+
+    #certify .swiper-slide {
+        width: 520px;
+        height: 408px;
+        background: #fff;
+        box-shadow: 0 8px 30px #ddd;
+    }
+
+    #certify .swiper-slide img {
+        display: block;
+        }
+
+    #certify .swiper-slide p {
+        line-height: 98px;
+        padding-top: 0;
             text-align: center;
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.1em;
-            font-weight: bold;
-            background: rgba(255, 255, 255, 0.15);
-            /* backdrop-filter: blur(12px); */
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
+        color: #636363;
+        font-size: 1.1em;
+        margin: 0;
         }
 
-        a:hover {
-            background: rgba(255, 255, 255, 0.25);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            letter-spacing: 2px;
-        }
-
-        /* 添加发光效果 */
-        a::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+    #certify .swiper-pagination {
             width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
-            opacity: 0;
-            transition: opacity 0.3s;
-            pointer-events: none;
+        bottom: 20px;
+    }
+
+    #certify .swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 5px;
+        border: 3px solid #fff;
+        background-color: #d5d5d5;
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+    }
+
+    #certify .swiper-pagination-bullets .swiper-pagination-bullet-active {
+        border: 3px solid #00aadc;
+        background-color: #fff;
+    }
+
+    #certify .swiper-button-prev {
+        left: -30px;
+        width: 45px;
+        height: 45px;
+        background: url(../images/wm_button_icon.png) no-repeat;
+        background-position: 0 0;
+        background-size: 100%;
         }
 
-        a:hover::after {
-            opacity: 0.15;
+    #certify .swiper-button-prev:hover {
+        background-position: 0 -46px;
+        background-size: 100%
+    }
+
+    #certify .swiper-button-next {
+        right: -30px;
+        width: 45px;
+        height: 45px;
+        background: url(../images/wm_button_icon.png) no-repeat;
+        background-position: 0 -93px;
+        background-size: 100%;
         }
 
-        /* 添加闪光效果 */
-        a::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg,
-            transparent,
-            rgba(255, 255, 255, 0.3),
-            transparent);
-            transform: rotate(45deg);
-            transition: 0.5s;
-            opacity: 0;
-        }
+    #certify .swiper-button-next:hover {
+        background-position: 0 -139px;
+        background-size: 100%
+    }
 
-        a:hover::before {
-            animation: shine 1.5s;
-        }
+    img {
+        width: 520px;
+        height: 310px;
+        background-position: center center;
+    }
 
-        @keyframes shine {
-            0% {
-                opacity: 0;
-                transform: translateX(-100%) rotate(45deg);
-            }
-
-            50% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 0;
-                transform: translateX(100%) rotate(45deg);
-            }
+    .swiper-slide a {
+        padding: 10px 20px;
+        text-decoration: none;
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-
-        <div class="card">
-            <a target="_blank" href="./周测/index.html">Bootstrap</a>
+    <div id="certify">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a target="_blank" href="../周测/index.html">
+                        <img
+                            src="https://img2.baidu.com/it/u=1924112727,1353594426&fm=253&fmt=auto&app=138&f=JPEG?w=640&h=407" alt="" >
+                        <p>博彩游戏的bootstrap页面</p>
+                        
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a target="_blank" href="../婚纱定制/index.html">
+                        <img src="../婚纱定制/images/f69469157480e3b2a665ff135570fc2e.jpg" alt="" >
+                        <p>婚纱定制的bootstrap页面</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a target="_blank" href="../手风琴.html">
+                        <img
+                            src="https://img1.baidu.com/it/u=2881546178,1611603179&fm=253&fmt=auto&app=138&f=JPEG?w=1216&h=684" alt="">
+                        <p>手风琴页面</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a target="_blank" href="../拼图游戏/14.案例拼图游戏.html">
+                        <img
+                            src="https://img2.baidu.com/it/u=2080259611,2233902898&fm=253&fmt=auto&app=120&f=JPEG?w=1139&h=712"alt="">
+                        <p>拼图游戏</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a target="_blank" href="../复制剪切.html">
+                        <img
+                            src="https://img2.baidu.com/it/u=3331588405,1791829035&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800" alt="">
+                        <p>复制剪切</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a target="_blank" href="../轮播图.html">
+                        <img src="../images/1.jpg"alt="">
+                        <p>swiper轮播图</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a target="_blank" href="../色卡生成器.html">
+                        <img
+                            src="https://img1.baidu.com/it/u=2491140923,3162578767&fm=253&fmt=auto&app=138&f=JPEG?w=833&h=500" alt="">
+                        <p>色卡生成器</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a target="_blank" href="../放大镜.html">
+                        <img src="https://img0.baidu.com/it/u=647227259,3149035775&fm=253&fmt=auto&app=138&f=JPEG?w=890&h=500"alt="">
+                        <p>放大镜</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a target="_blank" href="../练习/index2.html">
+                        <img src="https://img2.baidu.com/it/u=238675457,3853481417&fm=253&fmt=auto&app=138&f=JPEG?w=928&h=500" alt="">
+                        <p>贪吃蛇</p>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <a target="_blank" href="./婚纱定制/index.html">婚纱定制</a>
-        </div>
-        <div class="card">
-            <a target="_blank" href="./手风琴.html">手风琴</a>
-        </div>
-        <div class="card">
-            <a target="_blank" href="./拼图游戏/14.案例拼图游戏.html">拼图游戏</a>
-        </div>
-        <div class="card">
-            <a target="_blank" href="./复制剪切.html">复制剪切</a>
-        </div>
-        <div class="card">
-            <a target="_blank" href="./轮播图.html">轮播图</a>
-        </div>
-        <div class="card">
-            <a target="_blank" href="./色卡生成器.html">色卡生成器</a>
-        </div>
-        <div class="card">
-            <a target="_blank" href="./放大镜.html">放大镜</a>
-        </div>
-        <!-- ... 其他卡片保持不变 ... -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
+
+    <script>
+        certifySwiper = new Swiper('#certify .swiper-container', {
+            watchSlidesProgress: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            loop: true,
+            loopedSlides: 9,
+            autoplay: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                progress: function (progress) {
+                    for (i = 0; i < this.slides.length; i++) {
+                        var slide = this.slides.eq(i);
+                        var slideProgress = this.slides[i].progress;
+                        modify = 1;
+                        if (Math.abs(slideProgress) > 1) {
+                            modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+                        }
+                        translate = slideProgress * modify * 260 + 'px';
+                        scale = 1 - Math.abs(slideProgress) / 5;
+                        zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                        slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                        slide.css('zIndex', zIndex);
+                        slide.css('opacity', 1);
+                        if (Math.abs(slideProgress) > 3) {
+                            slide.css('opacity', 0);
+                        }
+                    }
+                },
+                setTransition: function (transition) {
+                    for (var i = 0; i < this.slides.length; i++) {
+                        var slide = this.slides.eq(i)
+                        slide.transition(transition);
+                    }
+
+                }
+            }
+
+        })
+    </script>
 </body>
 
 </html>
