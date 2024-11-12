@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.lsf {
+    position: relative;
+}
+
+#main1 {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+h1 {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    font-size: 50px;
+    margin: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: aqua;
+}
+
+#main2 {
+    position: absolute;
+    top: 7%;
+    left: 1%;
+    width: 28%;
+    height: 28vh;
+    z-index: 3;
+}
+
+#main3 {
+    position: absolute;
+    top: 71%;
+    left: 1%;
+    width: 30%;
+    height: 28vh;
+    z-index: 3;
+    color: transparent;
+}
+
+#main4 {
+    position: absolute;
+    color: white;
+    top: 22%;
+    right: 1%;
+    width: 30%;
+    height: 30vh;
+    z-index: 3;
+}
+
+#main5 {
+    position: absolute;
+    top: 63%;
+    right: 2%;
+    width: 25%;
+    height: 25vh;
+    z-index: 3;
+    transform: scale(1.1);
+}
+
+#main6 {
+    position: absolute;
+    top: 40%;
+    left: 3%;
+    width: 20%;
+    height: 25vh;
+    z-index: 3;
+    transform: scale(1.2);
+}
+
+
+
+
